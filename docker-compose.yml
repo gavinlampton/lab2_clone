@@ -1,0 +1,12 @@
+
+services:
+    node:
+        build: ./node
+        stdin_open: true
+        tty: true
+        volumes:
+            - type: bind
+              source: ./node/src
+              target: /usr/src
+        ports:
+            - "3000-3010:3000-3010"
